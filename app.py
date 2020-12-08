@@ -18,7 +18,7 @@ def index():
 @app.route('/lightson')
 def lightson():
     GPIO.output(11, True)
-    servo1.ChangeDutyCycle(120/18 +2)
+    servo1.ChangeDutyCycle(135/18 +2)
     sleep(2)
     servo1.ChangeDutyCycle(90/18 +2)
     sleep(2)
@@ -30,9 +30,9 @@ def lightson():
 @app.route('/lightsoff')
 def lightsoff():
     GPIO.output(11, True)
-    servo1.ChangeDutyCycle(60/18 +2)
-    sleep(2)
     servo1.ChangeDutyCycle(90/18 +2)
+    sleep(2)
+    servo1.ChangeDutyCycle(45/18 +2)
     sleep(2)
     servo1.ChangeDutyCycle(0)
     GPIO.output(11, False)
